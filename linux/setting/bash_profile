@@ -1,0 +1,39 @@
+#-----------------General--------------------------
+alias GIT="cd ~/Documents/GIT"
+# alias GOO="cd ~/Google\ Drive"
+
+#delete instead of rm (avoid permernant remove)
+alias del="~/.JangoSettings/mac/trash.sh"
+
+alias ls="ls -GpF"
+alias ll="ls -GpFlats"
+alias profile="vi ~/.bash_profile ~/.JangoSettings/linux/setting/bash_profile"
+
+#view system log
+alias log="tail -f /var/log/messages.log"
+
+#-----------------Development--------------------------
+
+#Testing
+alias fdTest="~/.JangoSettings/linux/test/fdTest.sh"
+alias memTest="~/.JangoSettings/linux/test/memTest.sh"
+
+#Python
+alias py="python"
+alias py3="python3"
+
+#for C programming 
+alias makefile="~/.JangoSettings/linux/copy_make_file.sh"
+alias project="~/.JangoSettings/linux/create_project.sh"
+
+#-----------------VIM-----------------------------------
+#enable ctrl+w+s (horizontal split) in vim
+stty -ixon -ixoff
+
+#-----------------PATH Environment Variable-----------------------------
+# export PATH="$HOME/Documents/android-sdk-macosx/platform-tools:$PATH"
+# export PATH="$HOME/Documents/android-sdk-macosx/tools:$PATH"
+
+#----------------Terminal color----------------------------------
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
