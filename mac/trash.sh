@@ -1,2 +1,2 @@
 #!/bin/sh
-mv $1 ~/.Trash
+cp -R $1 ~/.Trash/ && rm -R $1
