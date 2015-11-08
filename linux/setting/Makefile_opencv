@@ -1,0 +1,37 @@
+PROJECT := filterPlayer
+SCRIPT :=$(PROJECT) ~/Documents/GIT/AR_VR/ComputerVision/filter/PA1/balloon.jpg
+
+#set the compiler option
+CFLAGS :=-Wall \
+				 -g
+
+CC :=clang++
+
+OBJECT_DIR :=obj/
+SOURCE_DIR :=src/
+
+#header include
+INCLUDES :=-I./$(SOURCE_DIR) \
+					 -I/usr/local/include
+
+OPENCV_LIBS :=-lopencv_core -lopencv_highgui -lstdc++
+
+#library link (-L dynamic library, -l static lib)
+LD_LIBS :=-L/usr/local/lib/ $(OPENCV_LIBS) 
+					 
+SOURCES :=$(wildcard $(SOURCE_DIR)*.cpp) 
+OBJECTS :=$(SOURCES:$(SOURCE_DIR)%.cpp=$(OBJECT_DIR)%.o)
+
+$(PROJECT): $(OBJECTS)
+	$(CC) -o $@ $(OBJECTS) $(LD_LIBS) $(CFLAGS) 
+
+$(OBJECT_DIR)%.o: $(SOURCE_DIR)%.cpp
+	$(CC) $(INCLUDES) $(CFLAGS) -c $< -o $@ 
+
+all: $(PROJECT) $(OBJECTS)
+
+run: all
+	./$(SCRIPT)
+
+clean:
+		rm -rf $(OBJECT_DIR)*.o $(PROJECT)
