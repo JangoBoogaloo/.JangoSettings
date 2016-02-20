@@ -2,11 +2,11 @@
 alias GIT="cd ~/Documents/GIT"
 alias GOO="cd ~/Google\ Drive"
 
-#delete instead of rm (avoid permernant remove)
-alias del="~/.JangoSettings/mac/trash.sh"
+#delete instead of rm (avoid permernant removal)
+alias del="~/.JangoSettings/nix_common/trash.sh"
 alias ls="ls -GpF"
 alias ll="ls -GpFlats"
-alias profile="vi ~/.bash_profile ~/.JangoSettings/mac/setting/bash_profile"
+alias profile="vi ~/.bash_profile ~/.JangoSettings/mac/bash_profile"
 
 #show and hide hidden file
 alias show="defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app"
@@ -21,8 +21,8 @@ alias py="python"
 alias py3="python3"
 
 #for C programming 
-alias makefile="~/.JangoSettings/linux/copy_make_file.sh"
-alias project="~/.JangoSettings/linux/create_project.sh"
+alias makefile="~/.JangoSettings/nix_common/copy_make_file.sh"
+alias project="~/.JangoSettings/nix_common/create_project.sh"
 alias watch="~/.JangoSettings/mac/watch_process.sh"
 
 #-----------------VIM-----------------------------------

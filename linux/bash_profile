@@ -3,11 +3,11 @@ alias GIT="cd ~/Documents/GIT"
 # alias GOO="cd ~/Google\ Drive"
 
 #delete instead of rm (avoid permernant remove)
-alias del="~/.JangoSettings/mac/trash.sh"
+alias del="~/.JangoSettings/trash.sh"
 
 alias ls="ls -GpF"
 alias ll="ls -GpFlats"
-alias profile="vi ~/.bash_profile ~/.JangoSettings/linux/setting/bash_profile"
+alias profile="vi ~/.bash_profile ~/.JangoSettings/linux/bash_profile"
 
 #view system log
 alias log="tail -f /var/log/messages.log"
@@ -23,8 +23,8 @@ alias py="python"
 alias py3="python3"
 
 #for C programming 
-alias makefile="~/.JangoSettings/linux/copy_make_file.sh"
-alias project="~/.JangoSettings/linux/create_project.sh"
+alias makefile="~/.JangoSettings/nix_common/copy_make_file.sh"
+alias project="~/.JangoSettings/nix_common/create_project.sh"
 
 #-----------------VIM-----------------------------------
 #enable ctrl+w+s (horizontal split) in vim

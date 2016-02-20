@@ -8,7 +8,17 @@ CFLAGS := -Wall \
 				  -Wno-missing-field-initializers \
 				  -g
 
+LANG := CPP
+
 CC := gcc #g++ #clang #clang++
+
+ifeq ($(LANG), CPP)
+	CC := clang++
+	EXT := cpp
+else
+	CC := clang
+	EXT := c
+endif
 
 OBJECT_DIR :=obj/
 SOURCE_DIR :=src/
@@ -18,16 +28,13 @@ INCLUDES := -I./$(SOURCE_DIR)#\
 #library link
 LD_LIBS := #-lpthread #\ 
 
-#SOURCES :=$(wildcard $(SOURCE_DIR)*.cpp) 
-#OBJECTS :=$(SOURCES:$(SOURCE_DIR)%.cpp=$(OBJECT_DIR)%.o)
-SOURCES :=$(wildcard $(SOURCE_DIR)*.c) 
-OBJECTS :=$(SOURCES:$(SOURCE_DIR)%.c=$(OBJECT_DIR)%.o)
+SOURCES :=$(wildcard $(SOURCE_DIR)*.$(EXT)) 
+OBJECTS :=$(SOURCES:$(SOURCE_DIR)%.c=$(OBJECT_DIR)%.$(EXT))
 
 $(PROJECT): $(OBJECTS)
 	$(CC) $(CFLAGS) $(INCLUDES) -o $(PROJECT) $(OBJECTS) $(LD_LIBS)
 
-#$(OBJECT_DIR)%.o: $(SOURCE_DIR)%.cpp
-$(OBJECT_DIR)%.o: $(SOURCE_DIR)%.c
+$(OBJECT_DIR)%.o: $(SOURCE_DIR)%.$(EXT)
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 all: $(PROJECT) $(OBJECTS)
