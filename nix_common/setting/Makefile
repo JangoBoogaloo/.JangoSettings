@@ -2,15 +2,15 @@ PROJECT    := program
 SCRIPT     :=$(PROJECT) #add arguments
 
 #set the compiler option
-CFLAGS     :=-Wall -pedantic -Wextra -Wno-missing-field-initializers 
+CFLAGS     :=-Wall -pedantic -Wextra -Wno-missing-field-initializers
 CFLAGS     +=-g
 
-LANG       := CPP
+LANG       :=CPP
 
 ifeq ($(LANG), CPP)
 	CC       :=clang++
 	EXT 	   :=cpp
-	CFLAGS   += -std=c++11
+	CFLAGS   +=-std=c++11
 else
 	CC       :=clang
 	EXT      :=c
@@ -20,9 +20,9 @@ OBJECT_DIR :=obj/
 SOURCE_DIR :=src/
 
 #header include
-INCLUDES   := -I./$(SOURCE_DIR)#\ 
+INCLUDES   :=-I./$(SOURCE_DIR)#\ 
 #library link
-LD_LIBS    := #-lpthread #\ 
+LD_LIBS    :=#-lpthread #\ 
 
 SOURCES    :=$(wildcard $(SOURCE_DIR)*.$(EXT)) 
 OBJECTS    :=$(SOURCES:$(SOURCE_DIR)%.c=$(OBJECT_DIR)%.$(EXT))
