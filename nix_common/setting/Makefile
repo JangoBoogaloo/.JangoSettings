@@ -39,4 +39,4 @@ run: all
 	./$(SCRIPT)
 
 clean:
-		rm -rf $(OBJECT_DIR)*.o $(PROJECT)
+		rm -rf $(OBJECT_DIR)*.o $(PROJECT) $(PROJECT).dSYM
