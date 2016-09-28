@@ -9,3 +9,5 @@ else
 	echo Wrong argument $1
 	echo $0 "mac|linux"
 fi
+
+mkdir ~/Documents/GIT
