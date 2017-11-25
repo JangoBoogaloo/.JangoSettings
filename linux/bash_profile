@@ -3,7 +3,7 @@ alias GIT="cd ~/Documents/GIT"
 # alias GOO="cd ~/Google\ Drive"
 
 #delete instead of rm (avoid permernant remove)
-alias del="~/.JangoSettings/trash.sh"
+alias del="~/.JangoSettings/nix_common/trash.sh"
 
 alias ls="ls -GpF"
 alias ll="ls -GpFlats"
