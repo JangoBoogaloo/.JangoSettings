@@ -4,7 +4,8 @@ if [ "$1" = "linux" ]; then
 	cp ~/.JangoSettings/linux/bash_profile ~/.bash_profile
 elif [ "$1" = "mac" ]; then
 	echo Create $1 proile
-	cp ~/.JangoSettings/mac/bash_profile ~/.bash_profile
+	cp ~/.JangoSettings/mac/bash_profile ~/.zprofile
+	source .zprofile
 else
 	echo Wrong argument $1
 	echo $0 "mac|linux"

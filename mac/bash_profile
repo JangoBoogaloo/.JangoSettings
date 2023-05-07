@@ -6,7 +6,7 @@ alias GOO="cd ~/Google\ Drive"
 alias del="~/.JangoSettings/nix_common/trash.sh"
 alias ls="ls -GpF"
 alias ll="ls -GpFlats"
-alias profile="vi ~/.bash_profile ~/.JangoSettings/mac/bash_profile"
+alias profile="vi ~/.zprofile ~/.JangoSettings/mac/bash_profile"
 
 #show and hide hidden file
 alias show="defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app"
